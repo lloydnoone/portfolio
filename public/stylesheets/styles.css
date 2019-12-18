@@ -12,6 +12,10 @@ body {
     color: rgb(212, 212, 72);
 }
 
+h1 {
+  font-size: 25px;
+}
+
 h2 {
     position: absolute;
     z-index: 20;
@@ -49,29 +53,19 @@ section {
     justify-content: center;
     align-items: center;
 }
+nav {
+  position: absolute;
+  z-index: 30;
+  padding: 10px;
+  height: 60px;
+  width: 100vw;
+  border: solid red 1px;
+}
 
 .main {
-    display: grid;
-    grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
-    grid-template-rows: 
-        [landing-start] 100vh [landing-end about-start] 
-        auto [about-end] 
-        repeat(3, [row-start] 100vh [row-end]);
-}
-
-.main > * {
-    grid-column: col-start 1 / col-end 12;
-    grid-column: 1 / -1;
-}
-
-/* header */
-
-.header {
-    position: absolute;
     display: flex;
-    grid-column: col- start 1 / col-end 12;
-    grid-row: header-start / header-end;
-    z-index: 10;
+    flex-direction: column;
+    width: 100vw;
 }
 
 /* landing page */
@@ -80,8 +74,6 @@ section {
     display: flex;
     height: 100vh;
     width: 100vw;
-    grid-column: col-start 1 / col-end 12;
-    grid-row: landing-start / landing-end;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -97,8 +89,6 @@ section {
 
 /* About section */
 .about {
-    grid-column: col-start 1 / col-end 12;
-    grid-row: about-start / about-end;
     background: rgb(26, 26, 23);
 }
 
@@ -138,26 +128,28 @@ section {
 
 /* animations */
 .name {
-    position: absolute;
+  width: 100px;
+  position: absolute;
+    /* position: absolute;
     z-index: 30;
     animation-name: nameSlide;
     animation-duration: 2.5s;
     animation-timing-function: ease-out;
     animation-delay: 0s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
 
 .httpIcon {
     position: absolute;
     z-index: 30;
     display: flex;
-    animation-name: iconSlide;
+    /* animation-name: iconSlide;
     animation-duration: 2.5s;
     animation-timing-function: ease-out;
     animation-delay: 0s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
     /* animation-name: arrowBounce;
     animation-duration: 2.5s;
     animation-timing-function: ease-out;
@@ -171,41 +163,41 @@ section {
 }
 
 .iconColon {
-    animation-name: arrowColon;
+    /* animation-name: arrowColon;
     animation-duration: 2.5s;
     animation-timing-function: ease-out;
     animation-delay: 3s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
 
 .iconSlashA {
-    animation-name: arrowSlashA;
+    /* animation-name: arrowSlashA;
     animation-duration: 2.5s;
     animation-timing-function: ease-out;
     animation-delay: 5s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
 
 .iconSlashB {
-    animation-name: arrowSlashB;
+    /* animation-name: arrowSlashB;
     animation-duration: 2.5s;
     animation-timing-function: ease-out;
     animation-delay: 7s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
 
 .arrowWrapper {
     position: absolute;
     z-index: 30;
-    animation-name: arrowBounce;
+    /* animation-name: arrowBounce;
     animation-duration: 2.5s;
     animation-timing-function: ease-out;
     animation-delay: 12s;
     animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
 
 @keyframes iconSlide {
@@ -214,15 +206,6 @@ section {
     }
     100% {
         transform: translate(89vw, 15px);
-    }
-}
-
-@keyframes nameSlide {
-    0% {
-        transform: translate(-30px, 17px);
-    }
-    100% {
-        transform: translate(91vw, 17px);
     }
 }
 

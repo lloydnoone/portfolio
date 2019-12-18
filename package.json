@@ -2,15 +2,14 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Portfolio",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "author": "Lloyd Noone",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^2.6.2",
     "express": "^4.17.1"
   }
 }
