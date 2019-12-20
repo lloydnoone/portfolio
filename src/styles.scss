@@ -1,0 +1,252 @@
+/* general */
+
+$orange: rgb(255, 74, 2);
+$offWhite: rgb(218, 218, 191);
+$bgGrey: rgb(39, 39, 39);
+$lightOrange: rgb(250, 191, 143);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Economica', sans-serif;
+    font-size: 100%;
+    color: $orange;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+    position: absolute;
+    z-index: 20;
+    font-family: 'Lora', serif;
+    color: $offWhite;
+    font-size: 2em;
+    margin: 0 auto;
+    width: 50vw;
+}
+
+h3 {
+    font-family: 'Economica', sans-serif;
+    color: black;
+    font-size: 3.5em;
+    margin-bottom: 1%;
+    padding-bottom: 1%;
+    border-bottom: solid black 5px;
+}
+
+h4 {
+    color: black;
+    font-size: 2.5em;
+    margin: 20px;
+}
+
+h5 {
+  color: $offWhite;
+  font-size: 30px;
+  margin: 10px;
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+    color: $offWhite;
+    font-size: 1.5em;
+    margin-left: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 40px;
+    justify-content: center;
+    align-items: center;
+}
+nav {
+  position: absolute;
+  z-index: 30;
+  padding: 10px;
+  height: 60px;
+  width: 100vw;
+  border: solid red 1px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+/* landing page */
+
+.landing {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    div {
+      z-index: 30;
+      height: 60px;
+      width: 1px;
+      border: solid red 1px;
+    }
+}
+
+.landingBackground {
+    height: 100vh;
+    width: 100vw;
+    filter: blur(0.2em);
+    transform: scale(1.28);
+}
+
+.headingOne {
+  background-color: $orange;
+  h3 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  div {
+    width: 140px;
+    margin: 0 auto;
+  }
+}
+
+.split {
+  display: flex;
+}
+
+/* ProjectOne */
+.project {
+  background: $orange;
+  display: flex;
+  flex-direction: column;
+  h3, h4 {
+    color: black;
+  }
+
+}
+
+.projectAlt {
+  background: $bgGrey;
+  display: flex;
+  flex-direction: column;
+  h3, h4 {
+    color: $lightOrange;
+  }
+  .projDetails {
+    i {
+      color: $orange;
+    }
+  }
+  .links {
+    i {
+      color: $orange;
+    }
+  }
+}
+
+.projDetails {
+  width: 50%;
+  height: 100%;
+  .devIcons {
+    display: flex;
+    justify-content: space-around;
+  }
+  i {
+    color: black;
+    font-size: 70px;
+  }
+}
+
+.projImages {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+    box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.75);
+  }
+}
+
+.links {
+  display: flex;
+  margin: 20px;
+  i {
+    color: black;
+    font-size: 50px;
+  }
+}
+
+
+
+/* section 2 */
+
+.section2 {
+    background: green;
+}
+
+.section3 {
+    background: orange;
+}
+
+.section4 {
+    background: pink;
+}
+
+.name {
+  width: 100px;
+  position: absolute;
+}
+
+.httpIcon {
+    position: absolute;
+    z-index: 30;
+    display: flex;
+}
+
+.httpIcon > * {
+    margin: 0;
+}
+
+.arrowBounce {
+    animation-name: arrowBounce;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes arrowBounce {
+    0%{
+        transform: translateY(5vh);
+    }
+    50%{
+        transform: translateY(-5vh);
+    }
+    100%{
+        transform: translateY(5vh);
+    }
+}
+
+/* media queries */
+
+@media (max-width: 900px) {
+    .features div {
+        flex-basis: 50%;
+    }
+}
