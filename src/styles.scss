@@ -76,7 +76,6 @@ nav {
   padding: 10px;
   height: 60px;
   width: 100vw;
-  border: solid red 1px;
 }
 
 .main {
@@ -95,11 +94,13 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: $orange;
     div {
       z-index: 30;
       height: 60px;
       width: 1px;
-      border: solid red 1px;
+      padding-bottom: 40px;
+      margin-bottom: 80px;
     }
 }
 
@@ -161,11 +162,13 @@ nav {
   height: 100%;
   .devIcons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
   }
   i {
     color: black;
     font-size: 70px;
+    margin: 15px;
   }
 }
 
@@ -191,20 +194,9 @@ nav {
   }
 }
 
-
-
-/* section 2 */
-
-.section2 {
-    background: green;
-}
-
-.section3 {
-    background: orange;
-}
-
-.section4 {
-    background: pink;
+.contact {
+  display: flex;
+  justify-content: center;
 }
 
 .name {
@@ -220,27 +212,6 @@ nav {
 
 .httpIcon > * {
     margin: 0;
-}
-
-.arrowBounce {
-    animation-name: arrowBounce;
-    animation-duration: 2.5s;
-    animation-timing-function: ease-out;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-}
-
-@keyframes arrowBounce {
-    0%{
-        transform: translateY(5vh);
-    }
-    50%{
-        transform: translateY(-5vh);
-    }
-    100%{
-        transform: translateY(5vh);
-    }
 }
 
 /* media queries */
