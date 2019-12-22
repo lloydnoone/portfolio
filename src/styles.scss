@@ -194,9 +194,41 @@ nav {
   }
 }
 
+.additionalTech {
+  .devIcons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    i {
+      font-size: 70px;
+      margin: 15px;
+    }
+    .largeIcon {
+      font-size: 130px;
+      margin-top: -20px;
+    }
+  }
+}
+
+.aboutMe {
+  text-align: center;
+  p {
+    margin: 0 40px;
+  }
+}
+
 .contact {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  // realign the github icon
+  a:first-of-type {
+    margin-top: 15px;
+  }
+  i {
+    font-size: 30px;
+    margin: 15px;
+    color: $orange;
+  }
 }
 
 .name {
