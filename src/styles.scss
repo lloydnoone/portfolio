@@ -249,7 +249,20 @@ nav {
 /* media queries */
 
 @media (max-width: 900px) {
-    .features div {
-        flex-basis: 50%;
+  .split {
+    display: flex;
+    flex-direction: column;
+    .projDetails, .projImages {
+      width: 100%;
     }
+  }
+
+  .links {
+    flex-direction: column;
+    margin: 20px 0;
+    h5 {
+      display: inline;
+      margin: 10px;
+    }
+  }
 }
